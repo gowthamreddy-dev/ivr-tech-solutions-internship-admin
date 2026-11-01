@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+﻿import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
@@ -62,7 +62,7 @@ export async function POST(req: NextRequest) {
     const info = await transporter.sendMail({
       from: `"${smtpConfig?.fromName || "IVR Tech Solutions"}" <${user}>`,
       to: `"${recipientName}" <${recipientEmail}>`,
-      subject: subject || "Internship Offer Letter – IVR Tech Solutions Private Limited",
+      subject: subject || "Internship Offer Letter - IVR Tech Solutions Private Limited",
       text: body,
       attachments,
     });
@@ -83,3 +83,4 @@ export async function POST(req: NextRequest) {
     );
   }
 }
+
